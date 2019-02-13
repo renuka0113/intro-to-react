@@ -1,0 +1,30 @@
+<!Doctype html>
+ <html>
+  <head>
+   <title>This is the props example1</title>
+  </head>
+  <body>
+   <div id="root"></div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+   
+   <script type="text/babel">
+     
+class Greeting extends React.Component{
+  render(){
+   return(
+     <div>
+      <h1>This is a example from Bloc React Props but I changed it a bit</h1>
+       <p>Hello Renuka!Today is {this.props.day}!</p>
+     </div>
+     );
+    }
+   }
+
+   ReactDOM.render(
+     <Greeting day="Wednesday"/>, document.getElementById('root')
+     );
+  </script>
+ </body>
+</html>
