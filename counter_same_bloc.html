@@ -1,0 +1,41 @@
+<!Doctype html>
+ <html>
+  <head>
+   <title>This is the multiple-props example1</title>
+  </head>
+  <body>
+   <div id="root"></div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+   
+   <script type="text/babel">
+     
+class Counter extends React.Component{
+  render(){
+   return(
+     <div>
+      <h1>Current program:{this.props.label}</h1>
+      <img src={this.props.image} alt="Bloc Logo"/>
+      <p>Current Date:{this.props.date.toLocaleDateString()}</p>
+      <p>this is the same example as that on Bloc,here I created the const and default props</p>
+     </div>
+     );
+    }
+   }
+const info = {
+        date: new Date(),
+        image: 'https://avatars0.githubusercontent.com/u/1441485?v=4&s=280',
+      }
+
+      Counter.defaultProps = {
+        label: "Web Developer Track"
+      }
+
+   ReactDOM.render(
+     <Counter date={info.date}
+              image={info.image}/>, document.getElementById('root')
+     );
+  </script>
+ </body>
+</html>
